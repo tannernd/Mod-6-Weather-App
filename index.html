@@ -4,8 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    
+    <header class="text-center">
+        <h1>Weather Dashboard</h1>
+    </header>
+    <main>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-12 mx-auto">
+                <h2>Search for a City:</h2>
+                <input type="text" name="city" id="city" placeholder="Enter a city">
+                <button class="btn btn-primary my-3 ">Search</button>
+                <hr>
+                <div id="priorSearch">                    
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-6 col-12">
+                <div class="row">
+                    <div class="col-12 border border-1 border-dark">
+                        <h2 id="selected-city">City</h2>
+                        <p>Temp: <span id="current-temp"></span></p>
+                        <p>Wind: <span id="current-wind"></span></p>
+                        <p>Humidity: <span id="current-humidity"></span></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <h3>5-Day Forcast</h3>
+                </div>
+                <div class="row">
+                    <div id="day-1" class="forcast col-lg-2 col-md-6 col-12 m-3">
+                        <h3 id="day-1-date"></h3>
+                        <p>Temp: <span id="day-1-temp"></span></p>
+                        <p>Wind: <span id="day-1-wind"></span></p>
+                        <p>Humidity: <span id="day-1-humidity"></span></p>
+                    </div>
+                    <div id="day-2" class="forcast col-lg-2 col-md-6 col-12 m-3">
+                        <h3 id="day-2-date"></h3>
+                        <p>Temp: <span id="day-2-temp"></span></p>
+                        <p>Wind: <span id="day-2-wind"></span></p>
+                        <p>Humidity: <span id="day-2-humidity"></span></p>
+                    </div>
+                    <div id="day-3" class="forcast col-lg-2 col-md-6 col-12 m-3">
+                        <h3 id="day-3-date"></h3>
+                        <p>Temp: <span id="day-3-temp"></span></p>
+                        <p>Wind: <span id="day-3-wind"></span></p>
+                        <p>Humidity: <span id="day-3-humidity"></span></p>
+                    </div>
+                    <div id="day-4" class="forcast col-lg-2 col-md-6 col-12 m-3">
+                        <h3 id="day-4-date"></h3>
+                        <p>Temp: <span id="day-4-temp"></span></p>
+                        <p>Wind: <span id="day-4-wind"></span></p>
+                        <p>Humidity: <span id="day-4-humidity"></span></p>
+                    </div>
+                    <div id="day-5" class="forcast col-lg-2 col-md-6 col-12 m-3">
+                        <h3 id="day-5-date"></h3>
+                        <p>Temp: <span id="day-5-temp"></span></p>
+                        <p>Wind: <span id="day-5-wind"></span></p>
+                        <p>Humidity: <span id="day-5-humidity"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+    crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
