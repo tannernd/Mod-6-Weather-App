@@ -29,6 +29,11 @@ button {
     color:white;
 }
 
+.btn-secondary {
+    color:black;
+    background-color: #aeaeae;
+}
+
 #error-msg {
     color:red;
 }
