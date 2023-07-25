@@ -28,3 +28,7 @@ button {
     background-color: #323d4f;
     color:white;
 }
+
+#error-msg {
+    color:red;
+}
