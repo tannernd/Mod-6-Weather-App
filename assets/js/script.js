@@ -36,7 +36,7 @@ document.querySelector('#searchBox').addEventListener('submit', function(event) 
 //Geocoding function to get the latitude and longitude of the city that was entered
 function getGeocoding(city) {
     //API URL with apiKey appended
-    var requestUrl = encodeURI('http://api.openweathermap.org/geo/1.0/direct?q='+city+'&limit=1&appid='+apiKey);
+    var requestUrl = encodeURI('https://api.openweathermap.org/geo/1.0/direct?q='+city+'&limit=1&appid='+apiKey);
     //Fetch request for the data
     fetch(requestUrl)
       .then(function (response) {               
@@ -79,7 +79,7 @@ function getWeather(lat, lon) {
         }
         //Create a new element for the weather icon and append it
         var weatherIcon = document.createElement('img');
-        weatherIcon.setAttribute('src', "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png");        
+        weatherIcon.setAttribute('src', "https://openweathermap.org/img/w/" + data.weather[0].icon + ".png");        
         weatherIcon.setAttribute('id', "curr-weather-icon");
         document.querySelector('#selected-city').after(weatherIcon);
         //Update the current data with the information received from the API
@@ -103,7 +103,7 @@ function getWeather(lat, lon) {
             }
             //Create a new element for the weather icon and append it
             var weatherIcon = document.createElement('img');
-            weatherIcon.setAttribute('src', "http://openweathermap.org/img/w/" + value.weather[0].icon + ".png");        
+            weatherIcon.setAttribute('src', "https://openweathermap.org/img/w/" + value.weather[0].icon + ".png");        
             weatherIcon.setAttribute('id', "day-"+forcastDay+"-weather-icon");            
             document.querySelector('#day-'+forcastDay+'-date').after(weatherIcon);
             //Update the forcast data with the information received from the API
